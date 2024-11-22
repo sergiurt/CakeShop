@@ -1,0 +1,5 @@
+Chocolate Fudge Cake,500,Rich chocolate cake layered with creamy fudge frosting.,Medium,5,1
+Chocolate Cake,350,Rich chocolate cake,Medium,10,2
+Cheesecake,450,Creamy cheesecake,Small,5,3
+Black Forest,500,Chocolate and cherry cake,Large,8,4
+Carrot Cake,300,Moist carrot cake,Medium,12,5

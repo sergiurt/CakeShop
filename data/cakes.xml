@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cakes>
+    <cake>
+        <description>Classic vanilla cake with vanilla buttercream frosting.</description>
+        <id>2</id>
+        <name>Vanilla Cake</name>
+        <price>15</price>
+        <quantity>3</quantity>
+        <size>Large</size>
+    </cake>
+</cakes>
