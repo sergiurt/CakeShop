@@ -48,13 +48,14 @@ public class CakeService extends CakeShop {
         if (cakeShop.findEntity(id).isEmpty()) {
             throw new CakeExceptions("A cake with ID " + id + " does not exist.");
         }
-        if (id == null || cakeShop.findEntity(cake.getId()).isPresent() || cake.getName() == null ||
+        if (id == null || cake.getName() == null ||
                 cake.getName().isEmpty() || cake.getDescription() == null || cake.getDescription().isEmpty() ||
                 cake.getSize() == null || cake.getSize().isEmpty() || cake.getPrice() < 0 || cake.getQuantity() < 0) {
             throw new CakeExceptions("Invalid cake attributes.");
         }
 
-        cakeShop.updateEntity(id, cake);
+        cakeShop.deleteEntity(id);
+        cakeShop.addEntity(cake.getId(), cake);
     }
 
     public Optional<Cake> showCake(Integer id) {

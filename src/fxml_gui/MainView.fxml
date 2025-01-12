@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="fxml_gui.MainController">
+    <top>
+        <Label text="Cake and Order Management System" style="-fx-font-size: 18px; -fx-padding: 10;" />
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <!-- Cake Management -->
+            <Label text="Cake Management" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Button text="Add Cake" onAction="#handleAddCake" />
+                <Button text="Update Cake" onAction="#handleUpdateCake" />
+                <Button text="Remove Cake" onAction="#handleRemoveCake" />
+                <Button text="Show Cakes" onAction="#handleShowCakes" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Filter Cakes by Price" onAction="#handleFilterCakesByPrice" />
+                <Button text="Filter Cakes by Size" onAction="#handleFilterCakesBySize" />
+            </HBox>
+
+            <!-- Order Management -->
+            <Label text="Order Management" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Button text="Add Order" onAction="#handleAddOrder" />
+                <Button text="Cancel Order" onAction="#handleCancelOrder" />
+                <Button text="Finish Order" onAction="#handleFinishOrder" />
+                <Button text="Verify Order" onAction="#handleVerifyOrder" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Update Order" onAction="#handleUpdateOrder" />
+                <Button text="Show Orders" onAction="#handleShowOrders" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Filter Orders by Cake Name" onAction="#handleFilterOrdersByCakeName" />
+                <Button text="Filter Orders by Quantity" onAction="#handleFilterOrdersByQuantity" />
+            </HBox>
+
+            <!-- Reports Section -->
+            <Label text="Reports" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Button text="Orders for a Specific Cake" onAction="#handleReportOrdersForCake" />
+                <Button text="Revenue Per Cake Size" onAction="#handleReportRevenuePerSize" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Low Inventory Cakes" onAction="#handleReportLowInventoryCakes" />
+                <Button text="Most Expensive Cake Per Size" onAction="#handleReportMostExpensiveCakePerSize" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Order Count by Description" onAction="#handleReportOrderCountByDescription" />
+            </HBox>
+
+        </VBox>
+
+    </center>
+    <bottom>
+        <Label text="© 2024 Cake Shop Application" alignment="CENTER" style="-fx-padding: 10;" />
+    </bottom>
+</BorderPane>

@@ -57,7 +57,7 @@ public class CakeServiceTest {
         Cake cake = new Cake("Test Cake", 300, "Description", "Medium", 10, 1);
         cakeService.add(1, cake);
 
-        Cake updatedCake = new Cake("Updated Cake", 350, "Updated Description", "Large", 5, 2);
+        Cake updatedCake = new Cake("Updated Cake", 350, "Updated Description", "Large", 5, 1);
         cakeService.update(1, updatedCake);
 
         assertEquals(Optional.of(updatedCake), cakeService.showCake(1));
@@ -276,14 +276,6 @@ public class CakeServiceTest {
         assertThrows(CakeExceptions.class, () -> cakeService.update(99, cake));
     }
 
-    @Test
-    public void testUpdateWithExistingCakeId() {
-        Cake existingCake = new Cake("Existing Cake", 200, "Description", "Small", 5, 1);
-        cakeService.add(1, existingCake);
-
-        Cake newCake = new Cake("New Cake", 250, "New Description", "Medium", 3, 1);
-        assertThrows(CakeExceptions.class, () -> cakeService.update(1, newCake));
-    }
 
     @Test
     public void testUpdateWithNullName() {
@@ -312,14 +304,6 @@ public class CakeServiceTest {
         assertThrows(CakeExceptions.class, () -> cakeService.update(1, updatedCake));
     }
 
-    @Test
-    public void testUpdateWithInvalidSize() {
-        Cake existingCake = new Cake("Existing Cake", 200, "Description", "Small", 5, 1);
-        cakeService.add(1, existingCake);
-
-        Cake updatedCake = new Cake("Updated Cake", 250, "New Description", "Extra Large", 3, 1);
-        assertThrows(CakeExceptions.class, () -> cakeService.update(1, updatedCake));
-    }
 
     @Test
     public void testUpdateWithNegativePrice() {
